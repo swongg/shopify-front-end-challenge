@@ -17,3 +17,10 @@
   position: fixed;
   z-index: -1;
 }
+
+.button {
+  width: 250px;
+  
+
+  text-align: center;
+}

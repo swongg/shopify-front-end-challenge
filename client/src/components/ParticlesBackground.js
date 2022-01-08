@@ -6,15 +6,11 @@ const ParticlesBackground = () => {
     particles: {
       number: { value: 20, density: { enable: true, value_area: 800 } },
       color: {
-        value: [
-         "#FFC0CB"
-        ],
+        value: ["#FFC0CB"],
       },
       shape: {
-        type: "square", 
+        type: "square",
         stroke: { width: 0, color: "#FFC0CB" },
-      
-        
       },
       opacity: {
         value: 1.5,
