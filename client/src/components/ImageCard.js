@@ -9,9 +9,12 @@ import Collapse from "@mui/material/Collapse";
 import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import FavoriteIcon from "@mui/icons-material/Favorite";
-import Heart from "react-animated-heart";
+import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import ShareIcon from "@mui/icons-material/Share";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import Snackbar from "@mui/material/Snackbar";
+import MuiAlert from "@mui/material/Alert";
+import Grid from "@material-ui/core/Grid";
 
 const ExpandMore = styled((props) => {
   const { expand, ...other } = props;
@@ -27,31 +30,55 @@ const ExpandMore = styled((props) => {
 export default function ImageCard({ imageData }) {
   const [expanded, setExpanded] = useState(false);
   const [liked, setLiked] = useState(false);
+  const [open, setOpen] = useState(false);
+
+  const Alert = React.forwardRef(function Alert(props, ref) {
+    return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
+  });
+  const handleShareLinkClick = () => {
+    navigator.clipboard.writeText(imageData.url);
+    setOpen(true);
+  };
+
+  const handleClose = (event, reason) => {
+    if (reason === "clickaway") {
+      return;
+    }
+
+    setOpen(false);
+  };
 
   const handleExpandClick = () => {
     setExpanded(!expanded);
   };
 
   return (
-    <Card sx={{ maxWidth: 800 }}>
+    <Card className="App" sx={{ maxWidth: 1000 }}>
       <CardHeader title={imageData.title} subheader={imageData.date} />
-      <CardMedia component="img" height="600" image={imageData.url} />
+      <CardMedia component="img" height="750" image={imageData.url} />
       <CardContent>
         <Typography variant="body2" color="text.secondary">
           {imageData.description}
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
-        <IconButton aria-label="add to favorites">
-          {/* <FavoriteIcon /> */}
-
-          <Heart
-            className="heart"
-            isClick={liked}
+        {liked ? (
+          <IconButton
             onClick={() => setLiked(!liked)}
-          />
-        </IconButton>
-        <IconButton aria-label="share">
+            aria-label="add to favorites"
+          >
+            <FavoriteIcon />
+          </IconButton>
+        ) : (
+          <IconButton
+            onClick={() => setLiked(!liked)}
+            aria-label="add to favorites"
+          >
+            <FavoriteBorderIcon />
+          </IconButton>
+        )}
+
+        <IconButton onClick={handleShareLinkClick} aria-label="share">
           <ShareIcon />
         </IconButton>
         <ExpandMore
@@ -68,6 +95,11 @@ export default function ImageCard({ imageData }) {
           <Typography paragraph>{imageData.explanation}</Typography>
         </CardContent>
       </Collapse>
+      <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
+        <Alert onClose={handleClose} severity="success" sx={{ width: "100%" }}>
+          Image url has been saved to your clipboard!
+        </Alert>
+      </Snackbar>
     </Card>
   );
 }
