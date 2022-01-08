@@ -1,6 +1,6 @@
 import { start_date, end_date } from "../constants";
 
-const fetchImageData = async () => {
+const fetchImageDataArr = async () => {
   const api_key = process.env.REACT_APP_NASA_API_KEY;
 
   let imageDataArr;
@@ -19,8 +19,7 @@ const fetchImageData = async () => {
   } catch (error) {
     console.log(error);
   }
-
   return imageDataArr;
 };
 
-export default fetchImageData;
+export { fetchImageDataArr };

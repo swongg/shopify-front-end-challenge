@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { imageWidth, imageHeight, fontColor } from "../constants";
 import Heart from "react-animated-heart";
 import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
@@ -16,12 +15,17 @@ const Image = ({ imageData }) => {
           {imageData.date}
         </Typography>
 
-        <Typography style={{marginLeft: '200px', marginRight: '200px'}} paragraph={true} variant="h6" gutterBottom>
+        <Typography
+          style={{ marginLeft: "200px", marginRight: "200px" }}
+          paragraph={true}
+          variant="h6"
+          gutterBottom
+        >
           {imageData.explanation}
         </Typography>
       </Box>
       <Box>
-        <img src={imageData.url} width={imageWidth} height={imageHeight} />
+        <img src={imageData.url} width={750} height={500} />
       </Box>
 
       <Heart isClick={liked} onClick={() => setLiked(!liked)} />
