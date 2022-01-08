@@ -1,22 +1,29 @@
 import React, { useState, useEffect } from "react";
-import fetchImageData from "./utils/server";
+import fetchImageDataArr from "./utils/server";
+import Image from './components/Image';
+import "./App.css";
 
 const App = () => {
-  const [imageData, setImageData] = useState({});
+  const [imageDataArray, setImageDataArray] = useState({});
 
   useEffect(() => {
-    const imageData = async () => {
-      const data = await fetchImageData();
+    const imageDataArray = async () => {
+      const data = await fetchImageDataArr();
       console.log(data);
-      setImageData(data);
+      setImageDataArray(data);
     };
-    imageData();
+    imageDataArray();
+    console.log(imageDataArray)
   }, []);
+
+
 
   return (
     <div className="App">
-      <h1>hello</h1>
-      <img src={imageData.url} />
+      <h1>Spacestagram: Shopify's Expansion into the Extraterritorial </h1>
+      {imageDataArray.map((imageData) => (
+        <Image imageData={imageData}> </Image>
+      ))}
     </div>
   );
 };
