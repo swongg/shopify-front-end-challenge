@@ -4,7 +4,7 @@ import Image from './components/Image';
 import "./App.css";
 
 const App = () => {
-  const [imageDataArray, setImageDataArray] = useState({});
+  const [imageDataArray, setImageDataArray] = useState([]);
 
   useEffect(() => {
     const imageDataArray = async () => {

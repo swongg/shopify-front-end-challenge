@@ -1,7 +1,7 @@
 const fetchImageData = async () => {
   const api_key = process.env.REACT_APP_NASA_API_KEY;
 
-  const start_date = "2021-12-25";
+  const start_date = "2021-12-20";
   const end_date = "2022-01-01";
 
   let imageDataArr;

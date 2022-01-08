@@ -1,9 +1,10 @@
 import React from "react";
-const Image = ({imageData}) => {
+import { imageWidth, imageHeight } from "../constants";
+const Image = ({ imageData }) => {
   return (
     <div>
       <h3>{imageData.title}</h3>
-      <img src={imageData.url}/>
+      <img src={imageData.url} width={imageWidth} height={imageHeight} />
     </div>
   );
 };
