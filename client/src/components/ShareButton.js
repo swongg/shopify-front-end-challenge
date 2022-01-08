@@ -1,18 +1,18 @@
 import React, { useState } from "react";
-import Stack from "@mui/material/Stack";
-import Button from "@mui/material/Button";
+import ShareIcon from "@mui/icons-material/Share";
+import IconButton from "@mui/material/IconButton";
 import Snackbar from "@mui/material/Snackbar";
+import Box from "@mui/material/Box";
 import MuiAlert from "@mui/material/Alert";
-import Box from "@material-ui/core/Box";
 
-const Alert = React.forwardRef(function Alert(props, ref) {
-  return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
-});
-
-const ShareLinkButton = ({ url }) => {
+const ShareButton = ({ url }) => {
   const [open, setOpen] = useState(false);
 
-  const handleClick = () => {
+  const Alert = React.forwardRef(function Alert(props, ref) {
+    return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
+  });
+
+  const handleShareLinkClick = () => {
     navigator.clipboard.writeText(url);
     setOpen(true);
   };
@@ -21,24 +21,20 @@ const ShareLinkButton = ({ url }) => {
     if (reason === "clickaway") {
       return;
     }
-
     setOpen(false);
   };
 
   return (
-    <Stack spacing={2}>
-      <Box textAlign="center">
-        <Button className="button" variant="outlined" onClick={handleClick}>
-          Copy image url link
-        </Button>
-      </Box>
+    <Box>
+      <IconButton onClick={handleShareLinkClick} aria-label="share">
+        <ShareIcon />
+      </IconButton>
       <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
         <Alert onClose={handleClose} severity="success" sx={{ width: "100%" }}>
           Image url has been saved to your clipboard!
         </Alert>
       </Snackbar>
-    </Stack>
+    </Box>
   );
 };
-
-export default ShareLinkButton;
+export default ShareButton;
