@@ -3,6 +3,7 @@ import Heart from "react-animated-heart";
 import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
 import Button from "@material-ui/core/Button";
+import ShareLinkButton from "./ShareLinkButton";
 
 const Image = ({ imageData }) => {
   const [liked, setLiked] = useState(false);
@@ -37,7 +38,7 @@ const Image = ({ imageData }) => {
         />
       </Box>
 
-      <Button variant="outlined">Shareable link</Button>
+      <ShareLinkButton url={imageData.url} />
     </Box>
   );
 };
