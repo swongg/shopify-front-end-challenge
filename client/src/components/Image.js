@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { imageWidth, imageHeight } from "../constants";
+import { imageWidth, imageHeight, fontColor } from "../constants";
 import Heart from "react-animated-heart";
 import Typography from "@material-ui/core/Typography";
-import Box from '@material-ui/core/Box'
+import Box from "@material-ui/core/Box";
 
 const Image = ({ imageData }) => {
   const [liked, setLiked] = useState(false);
@@ -12,8 +12,11 @@ const Image = ({ imageData }) => {
         <Typography variant="h4" gutterBottom>
           {imageData.title}
         </Typography>
-        </Box>
-        <Box>
+        <Typography variant="h6" gutterBottom>
+          {imageData.date}
+        </Typography>
+      </Box>
+      <Box>
         <img src={imageData.url} width={imageWidth} height={imageHeight} />
       </Box>
       <Heart isClick={liked} onClick={() => setLiked(!liked)} />

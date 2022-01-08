@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import fetchImageDataArr from "./utils/server";
 import Image from "./components/Image";
+import ParticlesBackground from "./components/ParticlesBackground";
 import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
 import "./App.css";
@@ -25,6 +26,7 @@ const App = () => {
       {imageDataArray.map((imageData) => (
         <Image imageData={imageData} />
       ))}
+      <ParticlesBackground />
     </Box>
   );
 };
