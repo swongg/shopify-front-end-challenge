@@ -8,13 +8,11 @@ import CardActions from "@mui/material/CardActions";
 import Collapse from "@mui/material/Collapse";
 import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
-import FavoriteIcon from "@mui/icons-material/Favorite";
-import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
+import HeartButton from './HeartButton'
 import ShareIcon from "@mui/icons-material/Share";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import Snackbar from "@mui/material/Snackbar";
 import MuiAlert from "@mui/material/Alert";
-import Grid from "@material-ui/core/Grid";
 
 const ExpandMore = styled((props) => {
   const { expand, ...other } = props;
@@ -62,21 +60,7 @@ export default function ImageCard({ imageData }) {
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
-        {liked ? (
-          <IconButton
-            onClick={() => setLiked(!liked)}
-            aria-label="add to favorites"
-          >
-            <FavoriteIcon />
-          </IconButton>
-        ) : (
-          <IconButton
-            onClick={() => setLiked(!liked)}
-            aria-label="add to favorites"
-          >
-            <FavoriteBorderIcon />
-          </IconButton>
-        )}
+        <HeartButton liked={liked} setLiked={setLiked} />
 
         <IconButton onClick={handleShareLinkClick} aria-label="share">
           <ShareIcon />

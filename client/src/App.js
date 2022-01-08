@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { fetchImageDataArr } from "./utils/server";
 import { getImageDataArray, saveImageDataArray } from "./utils/localStorage";
-import Image from "./components/Image";
 import ImageCard from "./components/ImageCard";
 import ParticlesBackground from "./components/ParticlesBackground";
 import Typography from "@material-ui/core/Typography";
