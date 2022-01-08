@@ -32,7 +32,9 @@ const App = () => {
       {imageDataArray.map(
         (imageData) =>
           imageData.media_type !== "video" && (
+            <Box padding={2}>
             <ImageCard imageData={imageData} />
+            </Box>
           )
       )}
 
