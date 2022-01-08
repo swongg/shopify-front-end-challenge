@@ -23,9 +23,10 @@ const App = () => {
         Spacestagram: Shopify's Expansion into the Extragalactic
       </Typography>
 
-      {imageDataArray.map((imageData) => (
-        <Image imageData={imageData} />
-      ))}
+      {imageDataArray.map(
+        (imageData) =>
+          imageData.media_type !== "video" && <Image imageData={imageData} />
+      )}
       <ParticlesBackground />
     </Box>
   );

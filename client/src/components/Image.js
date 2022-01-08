@@ -19,6 +19,7 @@ const Image = ({ imageData }) => {
       <Box>
         <img src={imageData.url} width={imageWidth} height={imageHeight} />
       </Box>
+
       <Heart isClick={liked} onClick={() => setLiked(!liked)} />
     </Box>
   );
