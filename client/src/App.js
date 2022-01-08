@@ -22,11 +22,9 @@ const App = () => {
         Spacestagram: Shopify's Expansion into the Extragalactic
       </Typography>
 
-      <div className="recList">
-        {imageDataArray.map((imageData) => (
-          <Image imageData={imageData}/>
-        ))}
-      </div>
+      {imageDataArray.map((imageData) => (
+        <Image imageData={imageData} />
+      ))}
     </Box>
   );
 };
