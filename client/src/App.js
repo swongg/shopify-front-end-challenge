@@ -20,7 +20,7 @@ const App = () => {
 
   return (
     <div className="App">
-      <h1>Spacestagram: Shopify's Expansion into the Extraterritorial </h1>
+      <h1>Spacestagram: Shopify's Expansion into the Extragalactic </h1>
       {imageDataArray.map((imageData) => (
         <Image imageData={imageData}> </Image>
       ))}
