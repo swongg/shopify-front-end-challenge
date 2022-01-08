@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { fetchImageDataArr } from "./utils/server";
 import { getImageDataArray, saveImageDataArray } from "./utils/localStorage";
 import Image from "./components/Image";
+import ImageCard from "./components/ImageCard"
 import ParticlesBackground from "./components/ParticlesBackground";
 import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
@@ -31,7 +32,7 @@ const App = () => {
 
       {imageDataArray.map(
         (imageData) =>
-          imageData.media_type !== "video" && <Image imageData={imageData} />
+          imageData.media_type !== "video" && <ImageCard imageData={imageData} />
       )}
       <ParticlesBackground />
     </Box>
