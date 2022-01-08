@@ -32,6 +32,9 @@ export default function ImageCard({ imageData }) {
         </CardActions>
         <Collapse in={expanded} timeout="auto" unmountOnExit>
           <CardContent>
+            {imageData.copyright && (
+              <Typography variant="overline">{`By ${imageData.copyright}`}</Typography>
+            )}
             <Typography paragraph>{imageData.explanation}</Typography>
           </CardContent>
         </Collapse>
