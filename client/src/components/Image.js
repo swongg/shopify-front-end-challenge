@@ -15,6 +15,10 @@ const Image = ({ imageData }) => {
         <Typography variant="h6" gutterBottom>
           {imageData.date}
         </Typography>
+
+        <Typography style={{marginLeft: '200px', marginRight: '200px'}} paragraph={true} variant="h6" gutterBottom>
+          {imageData.explanation}
+        </Typography>
       </Box>
       <Box>
         <img src={imageData.url} width={imageWidth} height={imageHeight} />
