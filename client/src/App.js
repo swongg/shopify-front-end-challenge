@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import fetchImageDataArr from "./utils/server";
 import Image from "./components/Image";
+import Typography from "@material-ui/core/Typography";
+import Box from "@material-ui/core/Box";
 import "./App.css";
 
 const App = () => {
@@ -15,12 +17,17 @@ const App = () => {
   }, []);
 
   return (
-    <div className="App">
-      <h1>Spacestagram: Shopify's Expansion into the Extragalactic </h1>
-      {imageDataArray.map((imageData) => (
-        <Image imageData={imageData}> </Image>
-      ))}
-    </div>
+    <Box className="App" padding={5}>
+      <Typography variant="h2" gutterBottom>
+        Spacestagram: Shopify's Expansion into the Extragalactic
+      </Typography>
+
+      <div className="recList">
+        {imageDataArray.map((imageData) => (
+          <Image imageData={imageData}/>
+        ))}
+      </div>
+    </Box>
   );
 };
 
