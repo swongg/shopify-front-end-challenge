@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import fetchImageDataArr from "./utils/server";
+import { fetchImageDataArr } from "./utils/server";
+import { getImageDataArray, saveImageDataArray } from "./utils/localStorage";
 import Image from "./components/Image";
 import ParticlesBackground from "./components/ParticlesBackground";
 import Typography from "@material-ui/core/Typography";
@@ -10,11 +11,16 @@ const App = () => {
   const [imageDataArray, setImageDataArray] = useState([]);
 
   useEffect(() => {
-    const imageDataArray = async () => {
-      const data = await fetchImageDataArr();
-      setImageDataArray(data);
-    };
-    imageDataArray();
+    const storedImageDataArray = getImageDataArray();
+    if (storedImageDataArray) {
+      setImageDataArray(storedImageDataArray);
+    } else {
+      (async () => {
+        const data = await fetchImageDataArr();
+        saveImageDataArray(data);
+        setImageDataArray(data);
+      })();
+    }
   }, []);
 
   return (
