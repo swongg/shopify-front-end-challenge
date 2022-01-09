@@ -19,7 +19,7 @@ export default function ImageCard({ imageData }) {
     <Grid container justify="center">
       <Card className="App" sx={{ width: 1000 }}>
         <CardHeader title={imageData.title} subheader={imageData.date} />
-        <CardMedia component="img" height="600" image={imageData.url} />
+        <CardMedia component="img" className='cardMedia' image={imageData.url} />
         <CardContent>
           <Typography variant="body2" color="text.secondary">
             {imageData.description}

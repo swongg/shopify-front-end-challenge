@@ -17,7 +17,7 @@ const ShareButton = ({ url }) => {
     setOpen(true);
   };
 
-  const handleClose = (event, reason) => {
+  const handleClose = (_event, reason) => {
     if (reason === "clickaway") {
       return;
     }
