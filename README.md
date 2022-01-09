@@ -16,7 +16,7 @@ floating Shopify-green squares for obvious reasons :)
 ## Screenshot
 ![image](https://user-images.githubusercontent.com/46267622/148666783-3d9fa0ba-9776-4149-b6e3-a19f0b7aa4e4.png)
 
-#### Technologies used:
+### Technologies used:
 - React
 - Material UI
 - JavaScript
