@@ -27,13 +27,14 @@ const App = () => {
 
   return (
     <Box className="App" padding={5}>
+     
+      <Typography variant="h2" gutterBottom>
+        Spacestagram: Shopify's Expansion into the Extragalactic
+      </Typography>
       <ParticlesSwitch
         backgroundEffect={backgroundEffect}
         setBackgroundEffect={setBackgroundEffect}
       />
-      <Typography variant="h2" gutterBottom>
-        Spacestagram: Shopify's Expansion into the Extragalactic
-      </Typography>
 
       {imageDataArray.map(
         (imageData) =>
