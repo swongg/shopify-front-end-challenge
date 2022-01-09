@@ -13,7 +13,7 @@ const HeartButton = ({ liked, setLiked }) => {
           onClick={() => setLiked(!liked)}
           aria-label="add to favorites"
         >
-          <FavoriteIcon />
+          <FavoriteIcon style={{color: 'red'}} />
         </IconButton>
       ) : (
         <IconButton
