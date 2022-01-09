@@ -6,11 +6,10 @@ const ParticlesBackground = () => {
     particles: {
       number: { value: 20, density: { enable: true, value_area: 800 } },
       color: {
-        value: ["#FFC0CB"],
+        value: ["#96bf48"],
       },
       shape: {
         type: "square",
-        stroke: { width: 0, color: "#FFC0CB" },
       },
       opacity: {
         value: 1.5,
@@ -35,7 +34,7 @@ const ParticlesBackground = () => {
       line_linked: {
         enable: true,
         distance: 100.82952832645452,
-        color: "#FFC0CB",
+        color: "#96bf48",
         opacity: 1.4,
         width: 1,
       },

@@ -29,7 +29,7 @@ const ShareButton = ({ url }) => {
       <IconButton onClick={handleShareLinkClick} aria-label="share">
         <ShareIcon />
       </IconButton>
-      <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
+      <Snackbar open={open} autoHideDuration={4000} onClose={handleClose}>
         <Alert onClose={handleClose} severity="success" sx={{ width: "100%" }}>
           Image url has been saved to your clipboard!
         </Alert>
