@@ -26,9 +26,8 @@ const App = () => {
   }, []);
 
   return (
-    <Box className="App" padding={5}>
-     
-      <Typography variant="h2" gutterBottom>
+    <Box className="App" padding={10}>
+      <Typography variant="h3" gutterBottom>
         Spacestagram: Shopify's Expansion into the Extragalactic
       </Typography>
       <ParticlesSwitch
