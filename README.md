@@ -3,7 +3,7 @@
 ## About the project
 This is my submission to Shopify's Front End Developer Intern Challenge for Summer 2022! 
 - [my project](https://shopify-frontend-e475e.web.app/)
-- [challenge cpecifications](https://docs.google.com/document/d/13zXpyrC2yGxoLXKktxw2VJG2Jw8SdUfliLM-bYQLjqE/edit#)
+- [challenge specifications](https://docs.google.com/document/d/13zXpyrC2yGxoLXKktxw2VJG2Jw8SdUfliLM-bYQLjqE/edit#)
 
 
 ### Features
