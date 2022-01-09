@@ -17,7 +17,7 @@ floating Shopify-green squares for obvious reasons :)
 
 3) Images retrieved from the API call are stored in window's local storage so that the user will not need to perform another API call (provided that the contents of the local storage are not cleared) if they re-visit the web application. This feature was implemented to optimize for performance since API calls can be really slow.
 
-## Screenshots
+## Screenshot
 ![image](https://user-images.githubusercontent.com/46267622/148666783-3d9fa0ba-9776-4149-b6e3-a19f0b7aa4e4.png)
 
 #### Technologies used:
