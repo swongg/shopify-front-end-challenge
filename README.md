@@ -6,7 +6,7 @@ This is my submission to Shopify's Front End Developer Intern Challenge for Summ
 - [challenge specifications](https://docs.google.com/document/d/13zXpyrC2yGxoLXKktxw2VJG2Jw8SdUfliLM-bYQLjqE/edit#)
 
 
-### Features
+### Aditional Features
 1) There's a toggle switch component right below the title. Enabling the toggle will add some cool effects to the background! I chose 
 floating Shopify-green squares for obvious reasons :)
 
@@ -14,7 +14,9 @@ floating Shopify-green squares for obvious reasons :)
 
 3) Images retrieved from the API call are stored in window's local storage so that the user will not need to perform another API call (provided that the contents of the local storage are not cleared) if they re-visit the web application. This feature was implemented to optimize for performance since API calls can be really slow.
 
-4) Each image contains an expand button which reveals more information regarding the photo for the users that want to learn more!
+4) A loading spinner will appear on the screen until the photos have successfully been fetched from the API. 
+
+5) Each image contains an expand button which reveals more information regarding the photo for the users that want to learn more!
 
 ## Screenshot
 ![image](https://user-images.githubusercontent.com/46267622/148666783-3d9fa0ba-9776-4149-b6e3-a19f0b7aa4e4.png)
