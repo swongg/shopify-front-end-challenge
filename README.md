@@ -1,2 +1,29 @@
 # shopify-front-end-challenge
-Front End Developer Intern Challenge - Summer 2022
+
+## Contents
+
+* [About the project](#about-the-project)
+* [Contributors](#contributors)
+
+## About the project
+This is my submission to Shopify's Front End Developer Intern Challenge for summer 2022! Attached are the requirements for this project: 
+https://docs.google.com/document/d/13zXpyrC2yGxoLXKktxw2VJG2Jw8SdUfliLM-bYQLjqE/edit#
+Some additional features I would like to point out are as follows:
+
+1) There's a toggle switch component right below the title. Enabling the toggle will add some cool effects to the background! I chose 
+floating Shopify-green squares for obvious reasons :)
+
+2) Each photo contains a share button below it (the icon with the 3 connected dots). Clicking on the button will copy the image's url to your clipboard allowing you to easily share the awesome photos with your friends!
+
+3) Images retrieved from the API call are stored in window's local storage so that the user will not need to perform another API call (provided that the contents of the local storage are not cleared) if they re-visit the web application. This feature was implemented to optimize for performance since API calls can be really slow.
+
+## Screenshots
+![image](https://user-images.githubusercontent.com/46267622/148666783-3d9fa0ba-9776-4149-b6e3-a19f0b7aa4e4.png)
+
+#### Technologies used:
+- React
+- Material UI
+- JavaScript
+- NASA API
+- Google Firebase
+- Really cool particles library: https://www.npmjs.com/package/react-tsparticles
