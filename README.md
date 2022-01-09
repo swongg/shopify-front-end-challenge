@@ -1,10 +1,5 @@
 # shopify-front-end-challenge
 
-## Contents
-
-* [About the project](#about-the-project)
-* [Contributors](#contributors)
-
 ## About the project
 This is my submission to Shopify's Front End Developer Intern Challenge for summer 2022! Attached are the requirements for this project: 
 https://docs.google.com/document/d/13zXpyrC2yGxoLXKktxw2VJG2Jw8SdUfliLM-bYQLjqE/edit#
