@@ -1,11 +1,12 @@
 # shopify-front-end-challenge
 
 ## About the project
-This is my submission to Shopify's Front End Developer Intern Challenge for Summer 2022! Attached are the requirements for this project: 
-https://docs.google.com/document/d/13zXpyrC2yGxoLXKktxw2VJG2Jw8SdUfliLM-bYQLjqE/edit#
+This is my submission to Shopify's Front End Developer Intern Challenge for Summer 2022! 
+- [my project](https://shopify-frontend-e475e.web.app/)
+- [challenge cpecifications](https://docs.google.com/document/d/13zXpyrC2yGxoLXKktxw2VJG2Jw8SdUfliLM-bYQLjqE/edit#)
 
-Some additional features I would like to point out are as follows:
 
+### Features
 1) There's a toggle switch component right below the title. Enabling the toggle will add some cool effects to the background! I chose 
 floating Shopify-green squares for obvious reasons :)
 
@@ -22,4 +23,4 @@ floating Shopify-green squares for obvious reasons :)
 - JavaScript
 - NASA API
 - Google Firebase
-- Really cool particles library: https://www.npmjs.com/package/react-tsparticles
+- [Really cool particles library](https://www.npmjs.com/package/react-tsparticles)
