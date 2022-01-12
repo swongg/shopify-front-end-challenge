@@ -7,11 +7,11 @@ const saveImageDataArray = (imageDataArray) => {
 };
 
 const getImageDataArray = () => {
-  let getImageDataArray = localStorage.getItem(IMAGES_KEY);
-  if (getImageDataArray === "undefined") {
+  let imageDataArray = localStorage.getItem(IMAGES_KEY);
+  if (imageDataArray === "undefined") {
     return null;
   }
-  return getImageDataArray;
+  return imageDataArray;
 };
 
 export { saveImageDataArray, getImageDataArray };
