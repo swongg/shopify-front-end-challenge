@@ -18,6 +18,7 @@ const fetchImageDataArr = async () => {
     await apiCallToFetchImageData();
   } catch (error) {
     console.log(error);
+    return [];
   }
   return imageDataArr;
 };

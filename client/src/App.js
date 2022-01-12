@@ -16,13 +16,15 @@ const App = () => {
 
   useEffect(() => {
     const storedImageDataArray = getImageDataArray();
-    if (storedImageDataArray) {
-      setImageDataArray(storedImageDataArray);
+    if (storedImageDataArray !== null) {
+      setImageDataArray(JSON.parse(storedImageDataArray));
       setLoadState(false);
     } else {
       (async () => {
         const data = await fetchImageDataArr();
-        saveImageDataArray(data);
+        if (data.length) {
+          saveImageDataArray(data);
+        }
         setImageDataArray(data);
         setLoadState(false);
       })();
